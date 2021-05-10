@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 95vh;
+}
+a {
+    background-color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+}
+a:hover{
+    background-color: black;
+}
+.buttons {
+    display: flex;
+}
+button {
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+}
+button:hover{
+    background-color: black;
+}
+</style>
+<body>
+    <div class= center>
+        <h1>Counter</h1>
+        {{session['visits']}} time(s).
+        <div class="buttons">
+            <a href="/destroy">Destroy</a>
+            <a href="/addtwo">Add Two</a>
+        </div>
+        <form action="/custom" method="post">
+        <input type="text" name='add_visits' placeholder="Add Views">
+        <button>SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
